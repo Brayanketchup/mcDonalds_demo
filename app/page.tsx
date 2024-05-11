@@ -1,9 +1,10 @@
 import Image from "next/image";
-import { InfoBox } from '@/components';
+import { InfoBox, Hero } from '@/components';
 
 export default function Home() {
   return (
-    <main className=" px-20">
+    <main className="">
+      <Hero/>
       <InfoBox/>
     </main>
   );

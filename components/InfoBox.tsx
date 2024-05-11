@@ -5,9 +5,9 @@ import { home } from '@/constants'
 
 export const InfoBox = () => {
     return (
-        <>
+        <section className=' '>
             {home.map((item) => (
-                <div key={item.tittle} className=' w-full py-20'>
+                <div key={item.tittle} className=' w-full py-20 flex justify-center '>
                     <div className='flex lg:flex-row flex-col max-w-[1200px] space-x-4'>
                         <Image src={item.imageLink} width={750} height={50} alt='' className=' object-contain lg:w-2/3 w-full' />
                         <div className=' flex flex-col space-y-5 p-2'>
@@ -21,7 +21,7 @@ export const InfoBox = () => {
 
             ))}
 
-        </>
+        </section>
 
     )
 }

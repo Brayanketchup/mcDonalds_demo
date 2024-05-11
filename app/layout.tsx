@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+// import { Inter, LuckiestGuy } from "next/font/google"; // Import Luckiest Guy here
 import "./globals.css";
 import { Navbar, Footer } from '@/components';
 
@@ -17,12 +18,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Navbar/>
+
+      {/* <head>
+        <style>
+          {`@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');`}
+        </style>
+      </head> */}
+      <body className="overflow-x-hidden">
+        <Navbar />
         {children}
-        <Footer/>
+        <Footer />
       </body>
-      
+
     </html>
   );
 }

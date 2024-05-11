@@ -7,7 +7,21 @@ module.exports = {
   ],
   theme: {
     extend: {
-      
+
+      backgroundImage: {
+        'hero-bg': "url('/Hero-banner.jpg')",
+        'pattern-bg': "url('/pattern.jpg')"
+      },
+      colors: {
+        "black-100": "#2B2C35",
+        "primary-color": {
+          DEFAULT: "#f7e647",
+          100: "#ffbc0d",
+        },
+        "secondary-color": {
+          DEFAULT: "#da2d24"
+        },
+      }
     },
   },
   plugins: [],

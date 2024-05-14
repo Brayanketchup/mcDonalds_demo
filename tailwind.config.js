@@ -10,7 +10,9 @@ module.exports = {
 
       backgroundImage: {
         'hero-bg': "url('/Hero-banner.jpg')",
-        'pattern-bg': "url('/pattern.jpg')"
+        'pattern-bg': "url('/pattern1.png')"
+
+        
       },
       colors: {
         "black-100": "#2B2C35",

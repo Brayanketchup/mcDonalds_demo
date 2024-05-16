@@ -1,3 +1,6 @@
+import { EntryField, EntryFieldType } from "contentful";
+import { EntryFieldTypes } from 'contentful';
+import { Document } from '@contentful/rich-text-types';
 
 
 // export interface infoBoxProps {
@@ -10,8 +13,40 @@
 //     buttonLink: string
 
 // }
+export type ProductSkeleton = {
+  contentTypeId: "product";
+  fields: {
+    title: EntryFieldTypes.Text;
+    category: EntryFieldTypes.Text;
+    calories: EntryFieldTypes.Integer;
+    description: Document;
+    thumbnail: EntryFieldTypes.Symbol;
+    protein: EntryFieldTypes.Text;
+    totalCarbs: EntryFieldTypes.Text;
+    totalFat: EntryFieldTypes.Text;
+    saturatedFat: EntryFieldTypes.Text;
+    transFat: EntryFieldTypes.Text;
+    cholesterol: EntryFieldTypes.Text;
+    dietaryFiber: EntryFieldTypes.Text;
+    totalSugars: EntryFieldTypes.Text;
+    addedSugars: EntryFieldTypes.Text;
+    vitaminD: EntryFieldTypes.Text;
+    calcium: EntryFieldTypes.Text;
+    iron: EntryFieldTypes.Text;
+    potassium: EntryFieldTypes.Text;
+    sodium: EntryFieldTypes.Text;
+    ingredients: EntryFieldTypes.Object;
+    allergenInformation: EntryFieldTypes.RichText;
+    size: EntryFieldTypes.Text;
+    slug: EntryFieldTypes.Text;
+
+      }
+
+};
+
+
 export interface ProductFields {
-    title: string;
+    title: string ;
     category: string;
     calories: number;
     description?: Document;
@@ -35,3 +70,4 @@ export interface ProductFields {
     size?: string;
     slug: string;
   }
+

@@ -57,7 +57,7 @@ export const home = [
 
  ];
 
- export const shortMenu = [
+ export const menuCategories = [
   { title: "Breakfast", logo: "/menuLogos/breakfast.jpg", url:'/'},
   { title: "Burgers", logo: "/menuLogos/LeftRail_Burgers.jpg", url:'/'},
   { title: "Chicken & Fish Sandwiches", logo: "/menuLogos/LeftRail_ChickenFish.jpg", url:'/'},
@@ -67,7 +67,6 @@ export const home = [
   { title: "McCafe Coffees", logo: "/menuLogos/mccafe.jpg", url:'/'},
   { title: "Sweets & Treats", logo: "/menuLogos/desserts_shakes.jpg", url:'/'},
   { title: "Beverages", logo: "/menuLogos/drinks.jpg", url:'/'},
-  { title: "$1 $2 $3 Dollar Menu*", logo: "/menuLogos/D123.jpg", url:'/'},
 
  ]
  export const socials = [

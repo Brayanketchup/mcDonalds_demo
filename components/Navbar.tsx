@@ -4,7 +4,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react';
-import { shortMenu } from '@/constants';
+import { menuCategories } from '@/constants';
 
 export const Navbar = () => {
 
@@ -68,8 +68,8 @@ export const Navbar = () => {
                 <div>
                     <div className={`w-full p-4 absolute transition-all duration-300 bg-white ${showOurMenu ? 'translate-y-0' : '-translate-y-full'}`}>
                         <ul className='w-full grid grid-flow-col grid-rows-3'>
-                            {shortMenu.map((categorie) => (
-                                <li className='p-3' key={categorie.title}><Link href={categorie.url} className='flex flex-row'> <Image src={categorie.logo} height={60} width={60} alt='Categorie Logo' /> <h3>{categorie.title}</h3></Link></li>
+                            {menuCategories.map((category) => (
+                                <li className='p-3' key={category.title}><Link href={category.url} className='flex flex-row'> <Image src={category.logo} height={60} width={60} alt='Categorie Logo' /> <h3>{category.title}</h3></Link></li>
                             ))}
                         </ul>
                     </div>
@@ -92,7 +92,7 @@ export const Navbar = () => {
                 </ul>
                 <div className={`  w-full p-4 ${showOurMenu ? 'flex' : 'hidden'}`}>
                     <ul className='w-full grid grid-flow-col grid-rows-3'>
-                        {shortMenu.map((categorie) => (
+                        {menuCategories.map((categorie) => (
                             <li className='p-3' key={categorie.title}><Link href={categorie.url} className='flex flex-row'> <Image src={categorie.logo} height={60} width={60} alt='Categorie Logo' /> <h3>{categorie.title}</h3></Link></li>
                         ))}
                     </ul>
@@ -123,8 +123,8 @@ export const Navbar = () => {
                             <li className='py-5'>
                                 Our Menu
                                 <ul className='w-full grid grid-flow-col md:grid-rows-3 grid-rows-5'>
-                                    {shortMenu.map((categorie) => (
-                                        <li className='p-3' key={categorie.title}><Link href={categorie.url} className='flex flex-row'> <Image src={categorie.logo} height={60} width={60} alt='Categorie Logo' /> <h3>{categorie.title}</h3></Link></li>
+                                    {menuCategories.map((category) => (
+                                        <li className='p-3' key={category.title}><Link href={category.url} className='flex flex-row'> <Image src={category.logo} height={60} width={60} alt='Categorie Logo' /> <h3>{category.title}</h3></Link></li>
                                     ))}
                                 </ul>
                             </li>

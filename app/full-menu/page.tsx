@@ -33,7 +33,6 @@ export default async function Home() {
 
             if (filteredProducts.length === 0) return null; // if not products for that category skip it
 
-            // console.log(products)
             return (
 
               <div key={category.title}>

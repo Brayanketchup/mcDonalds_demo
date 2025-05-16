@@ -3,10 +3,9 @@
 import { EntryFieldTypes, createClient } from 'contentful';
 import { ProductSkeleton } from '@/types'
 
-
 const client = createClient({
-  space: '769v6chai5nq',
-  accessToken: 'l7c-ihVysv-xBFcYyXQ0lkjnaIHh_nis6sMdqEp5V9Y'
+  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID, 
+  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN
 });
 
 

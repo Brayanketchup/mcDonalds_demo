@@ -1,8 +1,5 @@
-// 'use client'
 import React from 'react';
 import { fetchProductsByCategory } from '@/utils';
-import { createClient } from 'contentful';
-// import { ProductSkeleton } from '@/types';
 import { CategoriesDisplay } from '@/components'
 import Image from 'next/image';
 import Link from 'next/link';
@@ -22,9 +19,9 @@ const Page = async ({ params }: PageProps) => {
     
     return (
         <section>
-            <h1 className='text-4xl md:text-5xl lg:text-6xl w-full text-center py-5'>Page for {category}</h1>
+            <h1 className='text-4xl md:text-5xl lg:text-6xl w-full text-center py-5'>{category}</h1>
             <div className='flex flex-row p-5'>
-                <div className='md:w-1/3 w-full md:flex  justify-center h-fit'>
+                <div className='md:w-1/3 w-full md:flex hidden justify-center h-fit'>
                     <CategoriesDisplay 
                     aditionalPath={'full-menu'}
                     />

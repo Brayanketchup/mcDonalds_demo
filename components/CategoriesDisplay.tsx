@@ -14,25 +14,6 @@ interface PageProps {
 export const CategoriesDisplay = ( { aditionalPath } : PageProps ) => {
 
   const pathname = usePathname();
-  // const isFullMenu = pathname.includes('full-menu/');
-
-  // const fullMenu = isFullMenu ? '' : 'agregarno';
-
-  // console.log(pathname, ' aver ', fullMenu)
-
-
-  // const pathname = usePathname();
-  // const isFullMenu = pathname.includes('full-menu/');
-
-  
-
-  // Remove 'full-menu/' from the pathname if it exists
-  // let activePathname = isFullMenu ? pathname.replace('full-menu', '') : pathname;
-
-
-
-  // console.log("we are at is not working completely: ", pathname, 'tiene esa cosa', isFullMenu);
-
 
   return (
 
@@ -52,20 +33,21 @@ export const CategoriesDisplay = ( { aditionalPath } : PageProps ) => {
       </ul>
 
       {/* //mobile */}
-      {/* <ul className=' md:hidden grid grid-flow-row lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 space-x-5 space-y-3 w-full p-10 items-center justify-items-center '>
+      <ul className=' md:hidden grid grid-flow-row lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 space-x-5 space-y-3 w-full p-10 items-center justify-items-center '>
 
 
         {menuCategories.map(category => (
 
           <li key={category.title} className=' flex flex-col max-w-[200px] items-center text-center'>
-
-            <Image src={category.logo} height={180} width={180} alt='Product Image' className=' '></Image>
-            <h1 className=' text-wrap'>{category.title}</h1>
+            <Link href={category.url}>
+              <Image src={category.logo} width={180} height={180} alt='category image' />
+              <h3>{category.title}</h3>
+            </Link>
 
           </li>
         ))}
 
-      </ul> */}
+      </ul>
     </>
   )
 }

@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 
 export const Hero = () => {
   return (
@@ -12,7 +11,6 @@ export const Hero = () => {
                 <button className='w-fit p-4 rounded-md text-sm text-black bg-[#ffbc0d]' >Order Now</button>    
             </div>
             <div className='w-full absolute bottom-0'> <Image src={'/overlay.svg'} width={1} height={1} alt='' className='w-full '/></div>
-            {/* <div className='w-full'> <img src={'/wave2.svg'} alt='' className='w-full h-20'/></div> */}
         </div>
         </section>
   )

@@ -11,7 +11,7 @@ export const Footer = () => {
 
     return (
         <footer className='w-full '>
-            <div className='w-full flex md:flex-row flex-col justify-between flex-wrap px-20'>
+            <div className='w-full flex md:flex-row flex-col md:justify-between items-center flex-wrap px-20'>
 
                 {footerLinks.map((link) => (
                     <div key={link.title} className='flex flex-col text-sm min-w-[170px] m-5'>

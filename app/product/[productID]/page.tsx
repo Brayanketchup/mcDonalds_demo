@@ -1,4 +1,3 @@
-// 'use client'
 import React from 'react'
 import { fetchProductsByID } from '@/utils';
 import Image from 'next/image';
@@ -6,15 +5,11 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { Document } from '@contentful/rich-text-types';
 
 
-
-
 interface PageProps {
     params: {
         productID: string;
     };
 }
-
-
 
 
 const Page = async ({ params }: PageProps) => {

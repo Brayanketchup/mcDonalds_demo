@@ -1,5 +1,3 @@
-// 'use client'
-
 import { fetchProducts } from '@/utils'
 import Image from 'next/image';
 import { menuCategories } from '@/constants';

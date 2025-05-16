@@ -25,7 +25,7 @@ export const CategoriesDisplay = ( { aditionalPath } : PageProps ) => {
           <li key={category.title} className='flex flex-row items-center space-x-2'>
 
             <Link href={category.url}>
-              <Image src={category.logo} width={100} height={100} alt='caegory image' />
+              <Image src={category.logo} width={100} height={100} alt='category image' />
               <h3>{category.title}</h3>
             </Link>
           </li>

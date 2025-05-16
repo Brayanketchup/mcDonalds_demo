@@ -9,7 +9,7 @@ export const InfoBox = () => {
             {home.map((item) => (
                 <div key={item.tittle} className=' w-full py-20 flex justify-center '>
                     <div className='flex lg:flex-row flex-col max-w-[1200px] space-x-4 '>
-                        <Image src={item.imageLink} width={750} height={50} alt='' className=' object-contain lg:w-2/3 w-full rounded-md' />
+                        <Image src={item.imageLink} width={750} height={50} alt='info icon' className=' object-contain lg:w-2/3 w-full rounded-md' />
                         <div className=' flex flex-col space-y-5 p-2'>
                             <h1 className=' md:text-3xl sm:text-2xl text-xl font-extrabold'>{item.tittle}</h1>
                             <p className='sm:text-sm text-lg ' >{item.info}</p>

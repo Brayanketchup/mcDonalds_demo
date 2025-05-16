@@ -35,7 +35,7 @@ const Page = async ({ params }: PageProps) => {
                             <li key={product.sys.id} className=' flex flex-col max-w-[350px] items-center text-center'>
 
                                 <Link href={'/product/' + product.fields.slug}>
-                                <Image src={'https:' + product.fields.thumbnail.fields.file.url} height={200} width={350} alt='Product Image' className=' '></Image>
+                                <Image src={'https:' + product.fields.thumbnail.fields.file.url} height={200} width={350} alt='Product Image'></Image>
                                 <h1 className=' text-wrap'>{product.fields.title}</h1>
                                 </Link>
 

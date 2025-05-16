@@ -1,9 +1,39 @@
+'use client'
 import React from 'react'
 import { menuCategories } from '@/constants';
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 
-export const CategoriesDisplay = () => {
+interface PageProps {
+  aditionalPath?: string;
+
+}
+
+export const CategoriesDisplay = ( { aditionalPath } : PageProps ) => {
+
+  const pathname = usePathname();
+  // const isFullMenu = pathname.includes('full-menu/');
+
+  // const fullMenu = isFullMenu ? '' : 'agregarno';
+
+  // console.log(pathname, ' aver ', fullMenu)
+
+
+  // const pathname = usePathname();
+  // const isFullMenu = pathname.includes('full-menu/');
+
+  
+
+  // Remove 'full-menu/' from the pathname if it exists
+  // let activePathname = isFullMenu ? pathname.replace('full-menu', '') : pathname;
+
+
+
+  // console.log("we are at is not working completely: ", pathname, 'tiene esa cosa', isFullMenu);
+
+
   return (
 
     <>
@@ -12,8 +42,11 @@ export const CategoriesDisplay = () => {
       <ul className='  md:flex flex-col hidden w-fit min-w-[260px] border-[#adadad] border-solid box-border border-2 rounded-lg p-5'>
         {menuCategories.map(category => (
           <li key={category.title} className='flex flex-row items-center space-x-2'>
-            <Image src={category.logo} width={100} height={100} alt='caegory image' />
-            <h3>{category.title}</h3>
+
+            <Link href={category.url}>
+              <Image src={category.logo} width={100} height={100} alt='caegory image' />
+              <h3>{category.title}</h3>
+            </Link>
           </li>
         ))}
       </ul>

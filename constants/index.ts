@@ -9,7 +9,7 @@ export const home = [
     {
         imageLink: "/home/bacon-cajun-ranch-add.jpg",
         tittle: "Try the New Bacon Cajun Ranch McCrispy™",
-        info: "Stacked with southern-style chicken, applewood smoked bacon, creamy Cajun ranch sauce and cool, crispy crinkle-cut pickles, the new Bacon Cajun Ranch McCrispy is the next-level chicken sandwich you didn’t know about...until now. Enjoy one as it comes (ya know, perfect) or go deluxe in the app.*",
+        info: "Stacked with southern-style chicken, applewood smoked bacon, creamy Cajun ranch sauce and cool, crispy crinkle-cut pickles, the new Bacon Cajun Ranch McCrispy is the next-level chicken sandwich you didn't know about...until now. Enjoy one as it comes (ya know, perfect) or go deluxe in the app.*",
         disclaimer: "*At participating McDonald's for a limited time.",
         buttonText: "Order the New McCrispy",
         buttonLink: "/"
@@ -17,23 +17,23 @@ export const home = [
     {
         imageLink: "/home/four-off.jpg",
         tittle: "Get $4 Off When You Download the App",
-        info: 'Download the app and get $4 off your first $4 or more* mobile order. If you do it right, it’s almost free—the math is mathing.',
+        info: "Download the app and get $4 off your first $4 or more* mobile order. If you do it right, it's almost free—the math is mathing.",
         disclaimer: "*Offer valid 1x thru the last day of the month for first time app users at participating McDonald's. May take up to 48 hours to appear in your deals. Must opt in to Rewards. Excludes tax.",
         buttonText: "Get $4 Off in the App",
         buttonLink: "/"
     },
     {
         imageLink: "/home/best-burgers-ever.jpg",
-        tittle: "“McD’s Best Burgers Ever.” - Hamburglar",
-        info: "You’re gonna love the hotter, juicier, tastier upgrades we’ve made to burgers like our Cheeseburger and Double Cheeseburger.* From patties grilled with onions and perfectly melted cheese to new soft, pillowy buns—these are our best burgers yet. Ask the Hamburglar, he can’t keep his hands off of ‘em. Robble, robble. Get one today in the app for pickup or McDelivery®",
-        disclaimer: "*Comparison of McDonald’s classic burgers to prior burgers. At participating McDonald’s. McDelivery prices may be higher than at restaurants. Delivery/other fees may apply.",
+        tittle: "“McD's Best Burgers Ever.” - Hamburglar",
+        info: "You're gonna love the hotter, juicier, tastier upgrades we've made to burgers like our Cheeseburger and Double Cheeseburger.* From patties grilled with onions and perfectly melted cheese to new soft, pillowy buns—these are our best burgers yet. Ask the Hamburglar, he can't keep his hands off of ‘em. Robble, robble. Get one today in the app for pickup or McDelivery®",
+        disclaimer: "*Comparison of McDonald's classic burgers to prior burgers. At participating McDonald's. McDelivery prices may be higher than at restaurants. Delivery/other fees may apply.",
         buttonText: "Order in the App",
         buttonLink: "/"
     }, 
     {
         imageLink: "/home/xCrocs.jpg",
-        tittle: "Step Into the World of McD’s x Crocs",
-        info: "Get a pair of McDonald’s branded clogs or limited edition Grimace, Birdie or Hamburglar Crocs decked out with fun McDonald’s x Crocs JibbitzTM charms or socks. Hurry, before it’s too late.* In celebration of the Crocs partnership, McDonald’s will be making a donation to Ronald McDonald House Charities® to help support families when they have a child who is ill or injured.",
+        tittle: "Step Into the World of McD's x Crocs",
+        info: "Get a pair of McDonald's branded clogs or limited edition Grimace, Birdie or Hamburglar Crocs decked out with fun McDonald's x Crocs JibbitzTM charms or socks. Hurry, before it's too late.* In celebration of the Crocs partnership, McDonald's will be making a donation to Ronald McDonald House Charities® to help support families when they have a child who is ill or injured.",
         disclaimer: "*While supplies last.",
         buttonText: "Shop the Collab Now",
         buttonLink: "/"
@@ -41,16 +41,16 @@ export const home = [
     {
       imageLink: "/home/online-app.jpg",
       tittle: "New: Faster Faves, Only in the App",
-      info: "We now prep when you’re on the way if you choose Curbside, Front Counter—or dine in for Table Service. Just order ahead in the app to save time. Because waiting in line for faves? Not our thing either.*",
-      disclaimer: "*At participating McDonald’s.",
+      info: "We now prep when you're on the way if you choose Curbside, Front Counter—or dine in for Table Service. Just order ahead in the app to save time. Because waiting in line for faves? Not our thing either.*",
+      disclaimer: "*At participating McDonald's.",
       buttonText: "Order Ahead in the App",
       buttonLink: "/"
   }, 
   {
     imageLink: "/home/deals-for-days.jpg",
     tittle: "Deals for Days",
-    info: "Get exclusive deals on your McDonald’s favorites in the app with contactless Mobile Order & Pay* and convenient Drive Thru or Curbside pickup.",
-    disclaimer: "*Mobile Order & Pay at participating McDonald’s.",
+    info: "Get exclusive deals on your McDonald's favorites in the app with contactless Mobile Order and Pay* and convenient Drive Thru or Curbside pickup.",
+    disclaimer: "*Mobile Order and Pay at participating McDonald's.",
     buttonText: "Gep App Deals",
     buttonLink: "/"
 }, 
@@ -58,15 +58,17 @@ export const home = [
  ];
 
  export const menuCategories = [
-  { title: "Breakfast", logo: "/menuLogos/breakfast.jpg", url:'/'},
-  { title: "Burgers", logo: "/menuLogos/LeftRail_Burgers.jpg", url:'/'},
-  { title: "Chicken & Fish Sandwiches", logo: "/menuLogos/LeftRail_ChickenFish.jpg", url:'/'},
-  { title: "McNuggets and Meals", logo: "/menuLogos/mcnuggets.jpg", url:'/'},
-  { title: "Fries & Sides", logo: "/menuLogos/snacks_sides.jpg", url:'/'},
-  { title: "Happy Meal", logo: "/menuLogos/nav_happy_meal.jpg", url:'/'},
-  { title: "McCafe Coffees", logo: "/menuLogos/mccafe.jpg", url:'/'},
-  { title: "Sweets & Treats", logo: "/menuLogos/desserts_shakes.jpg", url:'/'},
-  { title: "Beverages", logo: "/menuLogos/drinks.jpg", url:'/'},
+  { title: "Breakfast", logo: "/menuLogos/breakfast.jpg", url:'/full-menu/breakfast'},
+  { title: "Burgers", logo: "/menuLogos/LeftRail_Burgers.jpg", url:'/full-menu/burgers'},
+  { title: "Chicken and Fish Sandwiches", logo: "/menuLogos/LeftRail_ChickenFish.jpg", url:'/full-menu/chicken-and-fish-Sandwiches'},
+  { title: "McNuggets and Meals", logo: "/menuLogos/mcnuggets.jpg", url:'/full-menu/mcnuggets-and-meals'},
+  { title: "Fries and Sides", logo: "/menuLogos/snacks_sides.jpg", url:'/full-menu/fries-and-sides'},
+  { title: "Happy Meal", logo: "/menuLogos/nav_happy_meal.jpg", url:'/full-menu/happy-meal'},
+  { title: "McCafe Coffees", logo: "/menuLogos/mccafe.jpg", url:'/full-menu/mccafe-coffees'},
+  { title: "Sweets and Treats", logo: "/menuLogos/desserts_shakes.jpg", url:'/full-menu/sweets-and-treats'},
+  { title: "Beverages", logo: "/menuLogos/drinks.jpg", url:'/full-menu/beverages'},
+
+
 
  ]
  export const socials = [
@@ -87,11 +89,11 @@ export const home = [
         { title: "Leadership Team", url: "/" },
         { title: "Values In Action", url: "/" },
         { title: "Franchising info", url: "/" },
-        { title: "Recalls & Alerts", url: "/" },
-        { title: "Recalls & Alerts", url: "/" },
+        { title: "Recalls and Alerts", url: "/" },
+        { title: "Recalls and Alerts", url: "/" },
         { title: "Accessibility", url: "/" },
         { title: "Investor Relations", url: "/" },
-        { title: "News & Notifications", url: "/" }
+        { title: "News and Notifications", url: "/" }
       ],
     },
     {
@@ -99,11 +101,11 @@ export const home = [
       links: [
         { title: "Services Overview", url: "/" },
         { title: "Wi-Fi", url: "/" },
-        { title: "PlayPlaces & Parties", url: "/" },
+        { title: "PlayPlaces and Parties", url: "/" },
         { title: "McDelivery®", url: "/" },
-        { title: "Mobile Order & Pay", url: "/" },
+        { title: "Mobile Order and Pay", url: "/" },
         { title: "Trending Now", url: "/" },
-        { title: "McDonald’s Merchandise", url: "/" },
+        { title: "McDonald's Merchandise", url: "/" },
         { title: "Family Fun Hub", url: "/" },
         { title: "MyMcDonald's Rewards", url: "/" },
         { title: "McCafé®", url: "/" }
@@ -116,10 +118,10 @@ export const home = [
         { title: "Now Serving", url: "/" },
         { title: "HACER® Scholarships for Hispanic Students", url: "/" },
         { title: "Ronald McDonald House Charities®", url: "/" },
-        { title: "McDonald’s Asian Pacific American", url: "/" },
-        { title: "McDonald’s International", url: "/" },
+        { title: "McDonald's Asian Pacific American", url: "/" },
+        { title: "McDonald's International", url: "/" },
         { title: "Black and Positively Golden", url: "/" },
-        { title: "McDonald’s LGBTQ+", url: "/" },
+        { title: "McDonald's LGBTQ+", url: "/" },
         { title: "", url: "/" },
         { title: "", url: "/" }
       ],

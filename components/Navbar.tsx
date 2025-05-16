@@ -16,6 +16,11 @@ export const Navbar = () => {
     const toggleOurMenu = () => setshowOurMenu(!showOurMenu);
     const toggleMenu = () => setIsOpen(!isOpen);
 
+    const closeAllMenus = () => {
+        setshowOurMenu(false);
+        setIsOpen(false);
+    }
+
 
 
 
@@ -51,7 +56,7 @@ export const Navbar = () => {
         <>
             {/* desktop */}
 
-            <nav className=' lg:flex hidden sticky top-0 z-50 flex-col'>
+            <nav className=' lg:flex hidden sticky top-0 z-50 flex-col shadow-md'>
                 <div className='flex flex-col w-full items-center bg-white content-center z-20'>
 
                     <Link href={'/'}><Image src={'/main-logo-transparent.png'} width={60} height={60} alt='McDonalds Logo' /></Link>
@@ -64,12 +69,11 @@ export const Navbar = () => {
                         <li><Link href={'/'}>about us</Link></li>
                     </ul>
                 </div>
-                {/* <div className={`  w-full p-4 ${showOurMenu ? 'flex' : 'hidden'}`}> */}
                 <div>
                     <div className={`w-full p-4 absolute transition-all duration-300 bg-white ${showOurMenu ? 'translate-y-0' : '-translate-y-full'}`}>
                         <ul className='w-full grid grid-flow-col grid-rows-3'>
                             {menuCategories.map((category) => (
-                                <li className='p-3' key={category.title}><Link href={category.url} className='flex flex-row'> <Image src={category.logo} height={60} width={60} alt='Categorie Logo' /> <h3>{category.title}</h3></Link></li>
+                                <li className='p-3' key={category.title}><Link href={category.url} onClick={() => {closeAllMenus()}} className='flex flex-row'> <Image src={category.logo} height={60} width={60} alt='Categorie Logo' /> <h3>{category.title}</h3></Link></li>
                             ))}
                         </ul>
                     </div>
@@ -101,7 +105,7 @@ export const Navbar = () => {
             </nav> */}
 
             {/* mobile */}
-            <nav className='lg: hidden w-full sticky top-0 z-20'>
+            <nav className='lg:hidden w-full sticky top-0 z-20'>
                 <div className='flex flex-row justify-between px-5 py-2 items-center z-30'>
                     <Link href={'/'}><Image src={'/main-logo-transparent.png'} width={60} height={60} alt='McDonalds Logo' /></Link>
 
@@ -121,20 +125,21 @@ export const Navbar = () => {
                     <>
                         <ul className=' flex flex-col space-y-2'>
                             <li className='py-5'>
-                                Our Menu
+                                Menu Categories
                                 <ul className='w-full grid grid-flow-col md:grid-rows-3 grid-rows-5'>
                                     {menuCategories.map((category) => (
-                                        <li className='p-3' key={category.title}><Link href={category.url} className='flex flex-row'> <Image src={category.logo} height={60} width={60} alt='Categorie Logo' /> <h3>{category.title}</h3></Link></li>
+                                        <li className='p-3' key={category.title}><Link onClick={() => {closeAllMenus()}} href={category.url} className='flex flex-row'> <Image src={category.logo} height={60} width={60} alt='Categorie Logo' /> <h3>{category.title}</h3></Link></li>
                                     ))}
                                 </ul>
                             </li>
                             <li><div className=' content-none w-full h-[1px] bg-gray-500'></div></li>
-                            <li><Link href={'/'}>Download App</Link></li>
-                            <li><Link href={'/'}>MyMcDonald's Rewards</Link></li>
-                            <li><Link href={'/'}> Exclusive Deals</Link></li>
-                            <li><Link href={'/'}>About Our Food</Link></li>
-                            <li><Link href={'/'}>Locate</Link></li>
-                            <li><Link href={'/'}>Gift Cards</Link></li>
+                            <li><Link onClick={toggleMenu} href={'/full-menu'}>Open Full Menu</Link></li>
+                            <li><Link onClick={toggleMenu} href={'/'}>Download App</Link></li>
+                            <li><Link onClick={toggleMenu} href={'/'}>MyMcDonald's Rewards</Link></li>
+                            <li><Link onClick={toggleMenu} href={'/'}> Exclusive Deals</Link></li>
+                            <li><Link onClick={toggleMenu} href={'/'}>About Our Food</Link></li>
+                            <li><Link onClick={toggleMenu} href={'/'}>Locate</Link></li>
+                            <li><Link onClick={toggleMenu} href={'/'}>Gift Cards</Link></li>
                         </ul>
                     </>
                 </div>

@@ -15,12 +15,13 @@ interface PageProps {
 }
 
 
+
+
 const Page = async ({ params }: PageProps) => {
 
     const { productID } = params;
     const products = await fetchProductsByID(productID);
 
-    // console.log('producto', product)
     return (
 
         <>
@@ -47,11 +48,6 @@ const Page = async ({ params }: PageProps) => {
 
                     </div>
 
-                    // <li key={product.sys.id} className=' flex flex-col max-w-[350px] items-center text-center'>
-
-                    //     <h1 className=' text-wrap'>{product.fields.title}</h1>
-
-                    // </li>
                 ))}
 
 

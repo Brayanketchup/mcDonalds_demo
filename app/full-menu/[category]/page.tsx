@@ -25,7 +25,9 @@ const Page = async ({ params }: PageProps) => {
             <h1 className='text-4xl md:text-5xl lg:text-6xl w-full text-center py-5'>Page for {category}</h1>
             <div className='flex flex-row p-5'>
                 <div className='md:w-1/3 w-full md:flex  justify-center h-fit'>
-                    <CategoriesDisplay />
+                    <CategoriesDisplay 
+                    aditionalPath={'full-menu'}
+                    />
                 </div>
 
                 <div className='w-full'>
@@ -35,8 +37,10 @@ const Page = async ({ params }: PageProps) => {
 
                             <li key={product.sys.id} className=' flex flex-col max-w-[350px] items-center text-center'>
 
+                                <Link href={'/product/' + product.fields.slug}>
                                 <Image src={'https:' + product.fields.thumbnail.fields.file.url} height={200} width={350} alt='Product Image' className=' '></Image>
                                 <h1 className=' text-wrap'>{product.fields.title}</h1>
+                                </Link>
 
                             </li>
                         ))}

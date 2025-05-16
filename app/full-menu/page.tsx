@@ -4,14 +4,13 @@ import { fetchProducts } from '@/utils'
 import Image from 'next/image';
 import { menuCategories } from '@/constants';
 import { CategoriesDisplay } from '@/components'
+import Link from 'next/link';
 
 
 
 export default async function Home() {
   const products = await fetchProducts();
 
-
-  // console.log('produtcs are ', products);
 
 
   return (
@@ -30,13 +29,12 @@ export default async function Home() {
 
 
           {menuCategories.map(category => {
-            const filteredProducts = products.filter(product => product.fields.category === category.title);
+            const filteredProducts = products.filter(product => product.fields.category === category.url);
 
             if (filteredProducts.length === 0) return null; // if not products for that category skip it
 
+            // console.log(products)
             return (
-
-
 
               <div key={category.title}>
 
@@ -47,10 +45,10 @@ export default async function Home() {
                   {filteredProducts.map(product => (
 
                     <li key={product.sys.id} className=' flex flex-col max-w-[200px] items-center text-center'>
-
-                      <Image src={'https:' + product.fields.thumbnail.fields.file.url} height={180} width={180} alt='Product Image' className=' '></Image>
-                      <h1 className=' text-wrap'>{product.fields.title}</h1>
-
+                      <Link href={'/product/' + product.fields.slug}>
+                        <Image src={'https:' + product.fields.thumbnail.fields.file.url} height={180} width={180} alt='Product Image' className=' '></Image>
+                        <h1 className=' text-wrap'>{product.fields.title}</h1>
+                      </Link>
                     </li>
                   ))}
 
@@ -65,39 +63,3 @@ export default async function Home() {
     </section>
   );
 }
-
-//   return (
-//     <main className="bg-pattern-bg">
-//       <section className=' h-screen w-full bg-gray-500'>
-
-
-//         <h1 className='text-4xl md:text-5xl lg:text-6xl'>McDonalds's Menu</h1>
-
-
-//         {menuCategories.map(categorie => (
-//           <>
-//           <h1 className=' text-2xl'>{categorie.title}</h1>
-//             {products.map(product => product.fields.category === categorie.title ? (
-//               <div key={product.sys.id}>
-//                 <h1>{product.fields.title}</h1>
-
-//               </div>
-
-//             ) : '')}
-//           </>
-
-//         ))}
-
-
-
-
-
-
-
-
-//       </section>
-
-
-//     </main>
-//   );
-// }

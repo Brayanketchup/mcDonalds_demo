@@ -6,7 +6,7 @@ export default function page() {
     <div className='w-[80vw] flex flex-col justify-self-center pt-10'>
 
       <AboutCategoryLayout
-        imagelink='/about/about_Our_Food_Hero.jpg'
+        imagelink='/about/about-our-food.jpg'
         tittle='We are Passionate About Our Food'
         description="Explore McDonald's food facts, including calorie and dietary info. 
         Learn about nutrition facts and the ingredients used to deliver quality in every meal,

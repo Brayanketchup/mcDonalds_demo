@@ -27,6 +27,7 @@ const Page = async ({ params }: PageProps) => {
                     <div key={product.sys.id}>
                         <div className='flex md:flex-row flex-col p-10 space-y-5'>
                             <div className='md:w-2/3 w-full'>
+                            {/* @ts-ignore: thumbnail might be typed wrong, but we know at runtime it has .fields.file.url */}
                             <Image src={'https:' + product.fields.thumbnail.fields.file.url} height={430} width={750} alt='Product Image' className='' />
                             </div>
                             <article className=' text-black text-wrap md:w-1/4 w-full space-y-4'>

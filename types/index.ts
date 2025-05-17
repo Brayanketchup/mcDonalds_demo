@@ -3,16 +3,6 @@ import { EntryFieldTypes } from 'contentful';
 import { Document } from '@contentful/rich-text-types';
 
 
-// export interface infoBoxProps {
-
-//     imageLink: string,
-//     title: string,
-//     info: string,
-//     disclaimer: string,
-//     buttonText: string,
-//     buttonLink: string
-
-// }
 export type ProductSkeleton = {
   contentTypeId: "product";
   fields: {

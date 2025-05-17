@@ -43,6 +43,7 @@ export default async function Home() {
 
                     <li key={product.sys.id} className=' flex flex-col max-w-[200px] items-center text-center'>
                       <Link href={'/product/' + product.fields.slug}>
+                      {/* @ts-ignore: thumbnail might be typed wrong, but we know at runtime it has .fields.file.url */}
                         <Image src={'https:' + product.fields.thumbnail.fields.file.url} height={180} width={180} alt='Product Image' className=' '></Image>
                         <h1 className=' text-wrap'>{product.fields.title}</h1>
                       </Link>

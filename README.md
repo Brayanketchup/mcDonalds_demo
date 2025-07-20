@@ -26,7 +26,14 @@ A demo McDonald’s menu frontend built with **Next.js**, **TypeScript**, **Tail
 
 ## Getting Started
 
-First, run the development server:
+First, Install dependencies server:
+
+```bash
+npm install
+# or
+yarn install
+```
+Then, run the development server:
 
 ```bash
 npm run dev
